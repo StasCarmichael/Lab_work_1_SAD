@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 using DAL.Interface;
 using DAL.Provider;
@@ -65,7 +64,7 @@ namespace BLL.DataCreationSubsystem.Class
                     else { code += random.Next(ZERO, MAX_INDEX); }
                 }
 
-            } while (generateIdСodes.All(str => str == code));
+            } while (generateIdСodes.Contains(code));
 
 
             return code;
@@ -80,7 +79,17 @@ namespace BLL.DataCreationSubsystem.Class
                 try
                 {
                     codeBuilder.CreateEntityService(path);
-                    codeBuilder.generateIdСodes = codeBuilder.entityService.GetData();
+
+                    try
+                    {
+                        codeBuilder.generateIdСodes = codeBuilder.entityService.GetData();
+                    }
+                    catch (Exception)
+                    {
+                        codeBuilder.generateIdСodes = new LinkedList<string>();
+                        codeBuilder.entityService.AddNewData(codeBuilder.generateIdСodes);
+                    }
+
                 }
                 catch (Exception ex)
                 {

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BLL.DataCreationSubsystem.Class
 {
-  public  class Monobank
+    public class Monobank
     {
+
+
     }
 }

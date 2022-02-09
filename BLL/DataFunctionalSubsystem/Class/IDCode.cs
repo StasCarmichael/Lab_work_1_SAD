@@ -10,13 +10,11 @@ namespace BLL.DataFunctionalSubsystem.Class
         private bool isCodeCreated;
 
 
-        public IDCode()
+        internal IDCode()
         {
             code = string.Empty;
             isCodeCreated = false;
         }
-
-
         internal bool CreateCode(string uniqueCode)
         {
             if (RegEx.IDCode.IsMatch(uniqueCode))

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using BLL.DataCreationSubsystem.Class;
+using BLL.DataCreationSubsystem.Interface;
 using BLL.DataFunctionalSubsystem.Interface;
 using BLL.DataFunctionalSubsystem.Class;
 
@@ -14,15 +16,20 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            IPassportModify passport = new UkrainianPassport();
-            passport.Name = "Stas";
-            passport.Surname = "Kyrei";
-            passport.PassportNumber = "FDKNH";
-            passport.DateOfBirth = new DateTime(2003, 3, 15);
 
-            IPassport passport1 = passport as IPassport;
-            Console.WriteLine(passport1.Name);
-            Console.WriteLine(passport1.Surname);
+            IPassportService passportService = new UkrainianPassportService();
+
+            IPassport passport = passportService.CreatePassport( "Stas", "Kyrei", 15 ,"983414365");
+                
+            Console.WriteLine(passport.Name);
+            Console.WriteLine(passport.Surname);
+
+
+
+            IDCodeBuilder iDCodeBuilder = IDCodeBuilder.GetUniqueIDBuilder("data.dat");
+            IIDCode code = iDCodeBuilder.GetUniqueID();
+
+            Console.WriteLine(code.GetUniqueIdCode());  
         }
     }
 }
