@@ -8,5 +8,6 @@ namespace BLL.DataFunctionalSubsystem.Interface
         string BankName { get; }
         string BankCardNumber { get; }
         DateTime HowLongValid { get; }
+
     }
 }
