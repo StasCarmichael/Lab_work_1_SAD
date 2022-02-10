@@ -2,12 +2,10 @@
 
 namespace BLL.DataFunctionalSubsystem.Interface
 {
-    public interface IBankCard
+    public interface IUniversalBankCard : IAccount, ІІdІdentifier
     {
-
         string BankName { get; }
         string BankCardNumber { get; }
         DateTime HowLongValid { get; }
-
     }
 }

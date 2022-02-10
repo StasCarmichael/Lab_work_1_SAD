@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using BLL.DataCreationSubsystem.Interface;
+using BLL.DataFunctionalSubsystem.Interface;
+using BLL.DataFunctionalSubsystem.Class;
 
 namespace BLL.DataCreationSubsystem.Class
 {
-    public class Monobank
+    public class MonoBank : IBank
     {
+        public IUniversalBankCard CreateUniversalBankCard()
+        {
 
+            //todo
+
+            return new MonoUniversalCard();
+        }
 
     }
 }

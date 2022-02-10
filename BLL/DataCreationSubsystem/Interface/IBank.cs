@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+
+using BLL.DataFunctionalSubsystem.Class;
+using BLL.DataFunctionalSubsystem.Interface;
 
 namespace BLL.DataCreationSubsystem.Interface
 {
     public interface IBank
     {
+        IUniversalBankCard CreateUniversalBankCard();
     }
 }

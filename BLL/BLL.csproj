@@ -42,16 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataCreationSubsystem\Class\IDCodeBuilder.cs" />
-    <Compile Include="DataCreationSubsystem\Class\Monobank.cs" />
-    <Compile Include="DataCreationSubsystem\Class\Privatebank.cs" />
+    <Compile Include="DataCreationSubsystem\Class\MonoBank.cs" />
+    <Compile Include="DataCreationSubsystem\Class\PrivateBank.cs" />
     <Compile Include="DataCreationSubsystem\Class\UkrainianPassportService.cs" />
     <Compile Include="DataCreationSubsystem\Interface\IBank.cs" />
     <Compile Include="DataCreationSubsystem\Interface\IPassportService.cs" />
     <Compile Include="DataFunctionalSubsystem\Class\IDCode.cs" />
+    <Compile Include="DataFunctionalSubsystem\Class\MonoUniversalCard.cs" />
+    <Compile Include="DataFunctionalSubsystem\Class\PrivateUniversalCard.cs" />
     <Compile Include="DataFunctionalSubsystem\Class\UkrainianPassport.cs" />
-    <Compile Include="DataFunctionalSubsystem\Interface\IBankCard.cs" />
+    <Compile Include="DataFunctionalSubsystem\Interface\IAccount.cs" />
+    <Compile Include="DataFunctionalSubsystem\Interface\IUniversalBankCard.cs" />
     <Compile Include="DataFunctionalSubsystem\Interface\IIDCode.cs" />
     <Compile Include="DataFunctionalSubsystem\Interface\IPassport.cs" />
+    <Compile Include="DataFunctionalSubsystem\Interface\ІІdІdentifier.cs" />
     <Compile Include="MyException\RegException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegExpressions\RegEx.cs" />
