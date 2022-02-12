@@ -19,17 +19,29 @@ namespace Project
 
             IPassportService passportService = new UkrainianPassportService();
 
-            IPassport passport = passportService.CreatePassport( "Stas", "Kyrei", 15 ,"983414365");
-                
+            IPassport passport = passportService.CreatePassport("Stas", "Kyrei", 15, "983414365");
+
             Console.WriteLine(passport.Name);
             Console.WriteLine(passport.Surname);
 
 
 
             IDCodeBuilder iDCodeBuilder = IDCodeBuilder.GetUniqueIDBuilder("data.dat");
-            IIDCode code = iDCodeBuilder.GetUniqueID();
 
-            Console.WriteLine(code.GetUniqueIdCode());  
+            List<IIDCode> iDCodes = new List<IIDCode>(100);
+
+            for (int i = 0; i < 100; i++)
+            {
+                iDCodes.Add(iDCodeBuilder.GetUniqueID());
+            }
+
+            foreach (var item in iDCodes)
+            {
+                Console.WriteLine(item.GetUniqueIdCode());
+            }
+
+
+
         }
     }
 }

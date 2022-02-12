@@ -2,6 +2,6 @@
 {
     public interface IValidable
     {
-        bool isValid();
+        bool IsValid();
     }
 }

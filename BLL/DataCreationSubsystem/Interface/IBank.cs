@@ -1,13 +1,10 @@
-﻿using System;
-
-
-using BLL.DataFunctionalSubsystem.Class;
-using BLL.DataFunctionalSubsystem.Interface;
+﻿using BLL.DataFunctionalSubsystem.Interface;
 
 namespace BLL.DataCreationSubsystem.Interface
 {
     public interface IBank
     {
-        IUniversalBankCard CreateUniversalBankCard();
+        IUniversalBankCard CreateUniversalBankCard(IIDCode owner);
+        IUniversalBankCard CreateUniversalBankCard(IIDCode owner, decimal sum);
     }
 }

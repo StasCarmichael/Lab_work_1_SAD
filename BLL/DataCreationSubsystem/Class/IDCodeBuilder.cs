@@ -26,26 +26,18 @@ namespace BLL.DataCreationSubsystem.Class
         IEntityService<LinkedList<string>> entityService;
 
 
+        //privat ctor
         private IDCodeBuilder() { }
+        ~IDCodeBuilder()
+        {
+            SaveChange();
+        }
+
+
         private void CreateEntityService(string path)
         {
             dataProvider = new BinaryProvider<LinkedList<string>>(path);
             entityService = new EntityService<LinkedList<string>>(dataProvider);
-        }
-
-
-
-        public bool SaveChange()
-        {
-            return codeBuilder.entityService.AddNewData(generateIdСodes);
-        }
-        public IIDCode GetUniqueID()
-        {
-            IDCode idCode = new IDCode();
-
-            while (!idCode.CreateCode(GetUniqueCode())) { }
-
-            return idCode;
         }
         private string GetUniqueCode()
         {
@@ -66,8 +58,24 @@ namespace BLL.DataCreationSubsystem.Class
 
             } while (generateIdСodes.Contains(code));
 
+            generateIdСodes.AddLast(code);
 
             return code;
+        }
+
+
+        //Open Interface (API)
+        public bool SaveChange()
+        {
+            return codeBuilder.entityService.AddNewData(generateIdСodes);
+        }
+        public IIDCode GetUniqueID()
+        {
+            IDCode idCode = new IDCode();
+
+            while (!idCode.CreateCode(GetUniqueCode())) { }
+
+            return idCode;
         }
 
 

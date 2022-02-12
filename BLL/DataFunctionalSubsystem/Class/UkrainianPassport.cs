@@ -19,7 +19,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         public string Name
         {
             get { return name; }
-           internal set
+            internal set
             {
                 if (RegEx.Name.IsMatch(value))
                 {
@@ -31,7 +31,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         public string Surname
         {
             get { return surname; }
-           internal set
+            internal set
             {
                 if (RegEx.Surname.IsMatch(value))
                 {
@@ -43,7 +43,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         public int Age
         {
             get { return age; }
-          internal  set
+            internal set
             {
                 if (RegEx.Age(value))
                 {
@@ -55,7 +55,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         public string PassportNumber
         {
             get { return passportNumber; }
-         internal   set
+            internal set
             {
                 if (RegEx.PassportNumber.IsMatch(value))
                 {
@@ -68,7 +68,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         #endregion
 
 
-        public bool isValid()
+        public bool IsValid()
         {
             if (RegEx.Name.IsMatch(name))
                 if (RegEx.Surname.IsMatch(surname))

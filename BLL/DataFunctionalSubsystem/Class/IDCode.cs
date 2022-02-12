@@ -7,20 +7,17 @@ namespace BLL.DataFunctionalSubsystem.Class
     public sealed class IDCode : IIDCode, IValidable
     {
         private string code;
-        private bool isCodeCreated;
 
 
         internal IDCode()
         {
             code = string.Empty;
-            isCodeCreated = false;
         }
         internal bool CreateCode(string uniqueCode)
         {
             if (RegEx.IDCode.IsMatch(uniqueCode))
             {
                 code = uniqueCode;
-                isCodeCreated = true;
                 return true;
             }
 
@@ -32,8 +29,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         {
             return code;
         }
-        public bool CodeCreated() => isCodeCreated;
-        public bool isValid()
+        public bool IsValid()
         {
             if (RegEx.IDCode.IsMatch(code))
             {

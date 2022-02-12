@@ -44,26 +44,31 @@
     <Compile Include="DataCreationSubsystem\Class\IDCodeBuilder.cs" />
     <Compile Include="DataCreationSubsystem\Class\MonoBank.cs" />
     <Compile Include="DataCreationSubsystem\Class\PrivateBank.cs" />
+    <Compile Include="DataCreationSubsystem\Class\UHGInsuranceAgency.cs" />
     <Compile Include="DataCreationSubsystem\Class\UkrainianPassportService.cs" />
     <Compile Include="DataCreationSubsystem\Interface\IBank.cs" />
+    <Compile Include="DataCreationSubsystem\Interface\IInsuranceAgency.cs" />
     <Compile Include="DataCreationSubsystem\Interface\IPassportService.cs" />
     <Compile Include="DataFunctionalSubsystem\Class\IDCode.cs" />
     <Compile Include="DataFunctionalSubsystem\Class\MonoUniversalCard.cs" />
     <Compile Include="DataFunctionalSubsystem\Class\PrivateUniversalCard.cs" />
+    <Compile Include="DataFunctionalSubsystem\Class\UHGUniversalInsurancePolicy.cs" />
     <Compile Include="DataFunctionalSubsystem\Class\UkrainianPassport.cs" />
     <Compile Include="DataFunctionalSubsystem\Interface\IAccount.cs" />
+    <Compile Include="DataFunctionalSubsystem\Interface\IPayment.cs" />
     <Compile Include="DataFunctionalSubsystem\Interface\IUniversalBankCard.cs" />
     <Compile Include="DataFunctionalSubsystem\Interface\IIDCode.cs" />
     <Compile Include="DataFunctionalSubsystem\Interface\IPassport.cs" />
+    <Compile Include="DataFunctionalSubsystem\Interface\IUniversalInsurancePolicy.cs" />
     <Compile Include="DataFunctionalSubsystem\Interface\ІІdІdentifier.cs" />
+    <Compile Include="DataPackingSubsystem\Class\UniversalElectronicCard.cs" />
+    <Compile Include="DataPackingSubsystem\Interface\IUniversalElectronicCard.cs" />
     <Compile Include="MyException\RegException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegExpressions\RegEx.cs" />
     <Compile Include="ServiceInterface\IValidable.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataPackingSubsystem\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{8c352655-b739-4709-bfff-40443526824c}</Project>

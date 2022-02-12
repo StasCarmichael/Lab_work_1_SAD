@@ -1,5 +1,4 @@
 ﻿using System;
-
 using BLL.DataFunctionalSubsystem.Interface;
 using BLL.ServiceInterface;
 
@@ -7,10 +6,8 @@ namespace BLL.DataFunctionalSubsystem.Class
 {
     public class MonoUniversalCard : IUniversalBankCard, IValidable
     {
-        private decimal amountMoney;
-
-        internal MonoUniversalCard() { amountMoney = 0; BankName = "Mono Bank"; }
-        internal MonoUniversalCard(decimal sum) : base() { amountMoney = sum; }
+        internal MonoUniversalCard() { CurrentSum = 0; BankName = "Mono Bank"; }
+        internal MonoUniversalCard(decimal sum) : base() { CurrentSum = sum; }
 
 
         public IIDCode OwnerCode { get; internal set; }
@@ -21,25 +18,24 @@ namespace BLL.DataFunctionalSubsystem.Class
         public DateTime HowLongValid { get; internal set; }
 
 
-        public bool PutMoney(decimal sum) { amountMoney += sum; return true; }
+        public decimal CurrentSum { get; private set; }
+        public bool PutMoney(decimal sum) { CurrentSum += sum; return true; }
         public bool WithdrawMoney(decimal sum)
         {
-            if (amountMoney < sum) { return false; }
+            if (CurrentSum < sum) { return false; }
 
-            amountMoney -= sum;
+            CurrentSum -= sum;
             return false;
         }
 
 
-        public bool isValid()
+        public bool IsValid()
         {
             if (OwnerCode != null)
-            {
-                return true;
-            }
+                if (HowLongValid.Year <= DateTime.Now.Year && HowLongValid.Month <= DateTime.Now.Month)
+                    return true;
 
             return false;
         }
-
-    }
+            }
 }
