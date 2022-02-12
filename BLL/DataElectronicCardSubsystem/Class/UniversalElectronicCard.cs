@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.DataPackingSubsystem.Class
+namespace BLL.DataElectronicCardSubsystem.Class
 {
-    public class UniversalElectronicCard
+    class UniversalElectronicCard
     {
-
     }
 }

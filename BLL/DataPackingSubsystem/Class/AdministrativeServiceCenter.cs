@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.DataPackingSubsystem.Interface
+namespace BLL.DataPackingSubsystem.Class
 {
-    public interface IUniversalElectronicCard
+    class AdministrativeServiceCenter
     {
-
     }
 }
