@@ -3,12 +3,10 @@
 using BLL.DataFunctionalSubsystem.Interface;
 using BLL.MyException;
 using BLL.RegExpressions;
-using BLL.ServiceInterface;
-
 
 namespace BLL.DataFunctionalSubsystem.Class
 {
-    public class UkrainianPassport : IPassport, IValidable
+    public class UkrainianPassport : IPassport
     {
         private string name;
         private string surname;

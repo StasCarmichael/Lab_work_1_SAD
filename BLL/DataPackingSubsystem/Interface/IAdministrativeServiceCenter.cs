@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using BLL.DataCreationSubsystem.Interface;
+using BLL.DataElectronicCardSubsystem.Interface;
+using BLL.DataElectronicCardSubsystem.Class;
+
 
 namespace BLL.DataPackingSubsystem.Interface
 {
-    interface IAdministrativeServiceCenter
+    public interface IAdministrativeServiceCenter
     {
+        IBank Bank { get; set; }
+        IInsuranceAgency InsuranceAgency { get; set; }
+
+        void Reset();
+        void CreateNewUserWithPassport(string name, string surname, DateTime age);
+        void AddBankCard();
+        void AddInsurancePolicy();
+        IUniversalElectronicCard ReturnNewElectronicCard();
     }
 }

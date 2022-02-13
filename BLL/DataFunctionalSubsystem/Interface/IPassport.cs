@@ -1,8 +1,9 @@
 ﻿using System;
+using BLL.ServiceInterface;
 
 namespace BLL.DataFunctionalSubsystem.Interface
 {
-    public interface IPassport
+    public interface IPassport : IValidable
     {
         string Name { get; }
         string Surname { get; }

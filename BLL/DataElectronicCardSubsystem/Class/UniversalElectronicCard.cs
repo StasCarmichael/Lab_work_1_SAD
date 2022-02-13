@@ -1,6 +1,4 @@
-﻿using System;
-
-using BLL.DataFunctionalSubsystem.Interface;
+﻿using BLL.DataFunctionalSubsystem.Interface;
 using BLL.DataCreationSubsystem.Interface;
 using BLL.DataElectronicCardSubsystem.Interface;
 
@@ -8,14 +6,14 @@ namespace BLL.DataElectronicCardSubsystem.Class
 {
     class UniversalElectronicCard : IUniversalElectronicCard
     {
-        private IIDCode iDCode;
+        public IIDCode IDCode { get; private set; }
+        public string GetUniqueIdCode() { return IDCode?.GetUniqueIdCode() ?? null; }
+
 
         internal UniversalElectronicCard(IIDCode ID)
         {
-            iDCode = ID;
+            IDCode = ID;
         }
-
-        public string GetUniqueIdCode() { return iDCode?.GetUniqueIdCode() ?? null; }
 
 
         #region Pasport
@@ -38,7 +36,10 @@ namespace BLL.DataElectronicCardSubsystem.Class
                 return false;
             }
         }
-        public void AddNewPassport(IPassport passport) { Passport = passport; }
+        public void AddNewPassport(IPassport passport)
+        {
+            if (passport != null) { Passport = passport; }
+        }
 
         #endregion
 
@@ -65,7 +66,7 @@ namespace BLL.DataElectronicCardSubsystem.Class
         }
         public void AddNewBankCard(IUniversalBankCard bankCard)
         {
-            BankCard = bankCard;
+            if (bankCard != null) { BankCard = bankCard; }
         }
 
         #endregion
@@ -84,9 +85,18 @@ namespace BLL.DataElectronicCardSubsystem.Class
         }
         public void AddNewInsurancePolicy(IUniversalInsurancePolicy insurancePolicy)
         {
-            InsurancePolicy = insurancePolicy;
+            if (insurancePolicy != null) { InsurancePolicy = insurancePolicy; }
         }
 
         #endregion
+
+
+        public bool IsValid()
+        {
+            if (IDCode?.IsValid() == true && Passport?.IsValid() == true && BankCard?.IsValid() == true && InsurancePolicy?.IsValid() == true)
+                return true;
+
+            return false;
+        }
     }
 }

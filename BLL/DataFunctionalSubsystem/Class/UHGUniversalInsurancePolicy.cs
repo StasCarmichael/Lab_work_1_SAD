@@ -5,23 +5,22 @@ namespace BLL.DataFunctionalSubsystem.Class
 {
     public class UHGUniversalInsurancePolicy : IUniversalInsurancePolicy
     {
-        private const decimal COST = 500;
-        private const decimal MAX_INSURANCE_COVERAGE = 100000;
+        const decimal COST = 500;
+        const decimal MAX_INSURANCE_COVERAGE = 100000;
 
         const int VALID_TIME = 1;
         const int FIRST_DAY = 1;
 
 
-        internal UHGUniversalInsurancePolicy()
+        internal UHGUniversalInsurancePolicy(IIDCode owner, IUniversalBankCard paymentMethod)
+            : base()
         {
             HowLongValid = DateTime.MinValue;
             OwnerCode = null;
             InsuranceCost = COST;
             AmountOfInsuranceCoverage = 0;
-        }
-        internal UHGUniversalInsurancePolicy(IIDCode owner , IUniversalBankCard paymentMethod)
-            :base()
-        {
+
+
             OwnerCode = owner;
             PaymentMethod = paymentMethod;
         }
@@ -39,7 +38,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         {
             if (OwnerCode != null && PaymentMethod != null)
             {
-                if(PaymentMethod.CurrentSum > InsuranceCost)
+                if (PaymentMethod.CurrentSum > InsuranceCost)
                 {
                     PaymentMethod.WithdrawMoney(InsuranceCost);
                     AmountOfInsuranceCoverage = MAX_INSURANCE_COVERAGE;

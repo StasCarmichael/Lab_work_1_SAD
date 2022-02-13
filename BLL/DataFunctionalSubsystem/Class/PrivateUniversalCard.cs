@@ -1,10 +1,9 @@
 ﻿using System;
 using BLL.DataFunctionalSubsystem.Interface;
-using BLL.ServiceInterface;
 
 namespace BLL.DataFunctionalSubsystem.Class
 {
-    public class PrivateUniversalCard : IUniversalBankCard, IValidable
+    public class PrivateUniversalCard : IUniversalBankCard
     {
         internal PrivateUniversalCard() { CurrentSum = 0; BankName = "Private Bank"; }
         internal PrivateUniversalCard(decimal sum) : base() { CurrentSum = sum; }

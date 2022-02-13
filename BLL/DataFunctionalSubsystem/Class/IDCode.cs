@@ -1,10 +1,9 @@
 ﻿using BLL.DataFunctionalSubsystem.Interface;
 using BLL.RegExpressions;
-using BLL.ServiceInterface;
 
 namespace BLL.DataFunctionalSubsystem.Class
 {
-    public sealed class IDCode : IIDCode, IValidable
+    public sealed class IDCode : IIDCode
     {
         private string code;
 
