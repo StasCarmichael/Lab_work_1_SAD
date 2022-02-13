@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using BLL.DataCreationSubsystem.Class;
 using BLL.DataCreationSubsystem.Interface;
@@ -19,7 +18,7 @@ namespace Project
 
             IPassportService passportService = new UkrainianPassportService();
 
-            IPassport passport = passportService.CreatePassport("Stas", "Kyrei", 15, "983414365");
+            IPassport passport = passportService.CreatePassport("Stas", "Kyrei", new DateTime(2003,03,24));
 
             Console.WriteLine(passport.Name);
             Console.WriteLine(passport.Surname);
@@ -28,9 +27,9 @@ namespace Project
 
             IDCodeBuilder iDCodeBuilder = IDCodeBuilder.GetUniqueIDBuilder("data.dat");
 
-            List<IIDCode> iDCodes = new List<IIDCode>(100);
+            List<IIDCode> iDCodes = new List<IIDCode>(10);
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
                 iDCodes.Add(iDCodeBuilder.GetUniqueID());
             }

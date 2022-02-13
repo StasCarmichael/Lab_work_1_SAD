@@ -1,4 +1,6 @@
-﻿using BLL.DataFunctionalSubsystem.Interface;
+﻿using System;
+
+using BLL.DataFunctionalSubsystem.Interface;
 using BLL.MyException;
 using BLL.RegExpressions;
 using BLL.ServiceInterface;
@@ -10,7 +12,7 @@ namespace BLL.DataFunctionalSubsystem.Class
     {
         private string name;
         private string surname;
-        private int age;
+        private DateTime age;
         private string passportNumber;
 
 
@@ -40,7 +42,7 @@ namespace BLL.DataFunctionalSubsystem.Class
                 else { throw new RegException("Властивість Surname введена неправильно!"); }
             }
         }
-        public int Age
+        public DateTime Age
         {
             get { return age; }
             internal set
