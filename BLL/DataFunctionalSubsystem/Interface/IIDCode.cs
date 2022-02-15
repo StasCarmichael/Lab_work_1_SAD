@@ -4,6 +4,6 @@ namespace BLL.DataFunctionalSubsystem.Interface
 {
     public interface IIDCode: IValidable
     {
-        string GetUniqueIdCode();
+        string GetUniqueIdCode { get; }
     }
 }

@@ -7,7 +7,7 @@ namespace BLL.DataElectronicCardSubsystem.Class
     public class UniversalElectronicCard : IUniversalElectronicCard
     {
         public IIDCode IDCode { get; private set; }
-        public string GetUniqueIdCode() { return IDCode?.GetUniqueIdCode() ?? null; }
+        public string GetUniqueIdCode{ get { return IDCode?.GetUniqueIdCode ?? null; } }
 
 
         internal UniversalElectronicCard(IIDCode ID)

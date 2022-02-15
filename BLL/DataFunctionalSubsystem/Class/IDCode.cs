@@ -24,10 +24,7 @@ namespace BLL.DataFunctionalSubsystem.Class
         }
 
 
-        public string GetUniqueIdCode()
-        {
-            return code;
-        }
+        public string GetUniqueIdCode { get { return code; } }
         public bool IsValid()
         {
             if (RegEx.IDCode.IsMatch(code))

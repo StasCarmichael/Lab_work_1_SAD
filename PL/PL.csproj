@@ -78,6 +78,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\BLL.DataElectronicCardSubsystem.Class.UniversalElectronicCard.datasource" />
+    <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IAccount.datasource" />
+    <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IIDCode.datasource" />
+    <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IPassport.datasource" />
+    <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard.datasource" />
+    <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IUniversalInsurancePolicy.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
