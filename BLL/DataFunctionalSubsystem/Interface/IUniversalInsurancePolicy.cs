@@ -10,5 +10,6 @@ namespace BLL.DataFunctionalSubsystem.Interface
 
         decimal AmountOfInsuranceCoverage { get; }
         bool Activate();
+        bool IsActivated { get; }
     }
 }

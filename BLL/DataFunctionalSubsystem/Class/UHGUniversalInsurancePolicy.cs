@@ -52,6 +52,16 @@ namespace BLL.DataFunctionalSubsystem.Class
         }
 
 
+        public bool IsActivated
+        {
+            get
+            {
+                if (AmountOfInsuranceCoverage == MAX_INSURANCE_COVERAGE) { return true; }
+                return false;
+            }
+        }
+
+
         public bool IsValid()
         {
             if (OwnerCode != null && PaymentMethod != null)

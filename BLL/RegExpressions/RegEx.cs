@@ -8,7 +8,7 @@ namespace BLL.RegExpressions
         public static readonly Regex Name = new Regex("[a-zA-Zа-яА-ЯіїІЇйЙ]{1,100}");
         public static readonly Regex Surname = new Regex("[a-zA-Zа-яА-ЯіїІЇйЙ]{1,100}");
 
-        public static bool Age(DateTime age) { if (age.Year >= 1900 && age.Year < 2022) { return true; } else { return false; } }
+        public static bool Age(DateTime age) { if (age.Year >= 1900 && age < DateTime.Now) { return true; } else { return false; } }
 
 
         public static readonly Regex PassportNumber = new Regex("[0-9]{9}");
