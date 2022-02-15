@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\BLL.DataElectronicCardSubsystem.Class.UniversalElectronicCard.datasource" />
+    <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Class.UHGUniversalInsurancePolicy.datasource" />
     <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IAccount.datasource" />
     <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IIDCode.datasource" />
     <None Include="Properties\DataSources\BLL.DataFunctionalSubsystem.Interface.IPassport.datasource" />

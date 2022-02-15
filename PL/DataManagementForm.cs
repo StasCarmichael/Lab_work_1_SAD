@@ -32,14 +32,18 @@ namespace PL
 
             IDCodeBuilder iDCodeBuilder = IDCodeBuilder.GetUniqueIDBuilder("data.dat");
 
-            var administrativeServiceCenter = new AdministrativeServiceCenter(iDCodeBuilder, new UkrainianPassportService());
+            var administrativeServiceCenter = new AdministrativeServiceCenter(iDCodeBuilder, new UkrainianPassportService(), new MonoBank(), new UHGInsuranceAgency());
 
 
             administrativeServiceCenter.CreateNewUserWithPassport("Stas", "Kyrei", new DateTime(2003, 12, 2));
+            administrativeServiceCenter.AddBankCard();
+            administrativeServiceCenter.AddInsurancePolicy();
             bindingElectonicCardSourse.Add(administrativeServiceCenter.ReturnNewElectronicCard());
 
 
-            administrativeServiceCenter.CreateNewUserWithPassport("sdfdsf", "sdfdsf", new DateTime(2003, 12, 2));
+            administrativeServiceCenter.CreateNewUserWithPassport("Ldffdf", "sdfdsf", new DateTime(1996, 4, 8));
+            administrativeServiceCenter.AddBankCard();
+            administrativeServiceCenter.AddInsurancePolicy();
             bindingElectonicCardSourse.Add(administrativeServiceCenter.ReturnNewElectronicCard());
         }
 
@@ -56,15 +60,16 @@ namespace PL
             {
                 if (elctronicCard is UniversalElectronicCard electronicCard)
                 {
-                  
+
                     bindingIDCodeSource.Clear();
                     bindingPassportSource.Clear();
                     bindingBankCardSource.Clear();
+                    bindingAccountSource.Clear();
 
                     bindingIDCodeSource.Add(electronicCard.IDCode);
                     bindingPassportSource.Add(electronicCard.Passport);
                     bindingBankCardSource.Add(electronicCard.BankCard);
-
+                    bindingAccountSource.Add(electronicCard.BankCard);
                 }
             }
         }

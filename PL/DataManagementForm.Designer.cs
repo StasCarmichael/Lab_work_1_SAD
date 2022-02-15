@@ -45,11 +45,30 @@ namespace PL
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.groupBoxPassport = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.bindingPassportSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxPasSurname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxPasName = new System.Windows.Forms.TextBox();
             this.groupBoxIDCode = new System.Windows.Forms.GroupBox();
             this.textBoxFullId = new System.Windows.Forms.TextBox();
             this.bindingIDCodeSource = new System.Windows.Forms.BindingSource(this.components);
             this.labFullId = new System.Windows.Forms.Label();
             this.groupBoxBankCard = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.bindingBankCardSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.bindingAccountSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBoxInsurncePolicy = new System.Windows.Forms.GroupBox();
             this.groupBoxShortInfo = new System.Windows.Forms.GroupBox();
             this.groupBoxHasInfo = new System.Windows.Forms.GroupBox();
@@ -66,35 +85,18 @@ namespace PL
             this.labSurname = new System.Windows.Forms.Label();
             this.labName = new System.Windows.Forms.Label();
             this.textBoxBriefName = new System.Windows.Forms.TextBox();
-            this.textBoxPasSurname = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxPasName = new System.Windows.Forms.TextBox();
-            this.bindingPassportSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.bindingBankCardSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iAccountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).BeginInit();
             this.groupBoxPassport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).BeginInit();
             this.groupBoxIDCode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).BeginInit();
             this.groupBoxBankCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).BeginInit();
             this.groupBoxShortInfo.SuspendLayout();
             this.groupBoxHasInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iAccountBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator
@@ -241,6 +243,86 @@ namespace PL
             this.groupBoxPassport.TabStop = false;
             this.groupBoxPassport.Text = "Passport";
             // 
+            // textBox6
+            // 
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "PassportNumber", true));
+            this.textBox6.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox6.Location = new System.Drawing.Point(126, 192);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(221, 30);
+            this.textBox6.TabIndex = 18;
+            // 
+            // bindingPassportSource
+            // 
+            this.bindingPassportSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IPassport);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(33, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 24);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Number";
+            // 
+            // textBox5
+            // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "Age", true));
+            this.textBox5.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox5.Location = new System.Drawing.Point(126, 142);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(220, 30);
+            this.textBox5.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(70, 145);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 24);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Age";
+            // 
+            // textBoxPasSurname
+            // 
+            this.textBoxPasSurname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "Surname", true));
+            this.textBoxPasSurname.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPasSurname.Location = new System.Drawing.Point(126, 95);
+            this.textBoxPasSurname.Name = "textBoxPasSurname";
+            this.textBoxPasSurname.ReadOnly = true;
+            this.textBoxPasSurname.Size = new System.Drawing.Size(220, 30);
+            this.textBoxPasSurname.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(53, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 24);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 24);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Surname";
+            // 
+            // textBoxPasName
+            // 
+            this.textBoxPasName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "Name", true));
+            this.textBoxPasName.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPasName.Location = new System.Drawing.Point(126, 48);
+            this.textBoxPasName.Name = "textBoxPasName";
+            this.textBoxPasName.ReadOnly = true;
+            this.textBoxPasName.Size = new System.Drawing.Size(220, 30);
+            this.textBoxPasName.TabIndex = 11;
+            // 
             // groupBoxIDCode
             // 
             this.groupBoxIDCode.Controls.Add(this.textBoxFullId);
@@ -248,7 +330,7 @@ namespace PL
             this.groupBoxIDCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxIDCode.Location = new System.Drawing.Point(420, 284);
             this.groupBoxIDCode.Name = "groupBoxIDCode";
-            this.groupBoxIDCode.Size = new System.Drawing.Size(335, 80);
+            this.groupBoxIDCode.Size = new System.Drawing.Size(353, 80);
             this.groupBoxIDCode.TabIndex = 2;
             this.groupBoxIDCode.TabStop = false;
             this.groupBoxIDCode.Text = "ID";
@@ -260,7 +342,7 @@ namespace PL
             this.textBoxFullId.Location = new System.Drawing.Point(97, 35);
             this.textBoxFullId.Name = "textBoxFullId";
             this.textBoxFullId.ReadOnly = true;
-            this.textBoxFullId.Size = new System.Drawing.Size(232, 30);
+            this.textBoxFullId.Size = new System.Drawing.Size(249, 30);
             this.textBoxFullId.TabIndex = 7;
             // 
             // bindingIDCodeSource
@@ -278,6 +360,8 @@ namespace PL
             // 
             // groupBoxBankCard
             // 
+            this.groupBoxBankCard.Controls.Add(this.label8);
+            this.groupBoxBankCard.Controls.Add(this.textBox7);
             this.groupBoxBankCard.Controls.Add(this.textBox3);
             this.groupBoxBankCard.Controls.Add(this.label3);
             this.groupBoxBankCard.Controls.Add(this.label4);
@@ -287,15 +371,99 @@ namespace PL
             this.groupBoxBankCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxBankCard.Location = new System.Drawing.Point(789, 25);
             this.groupBoxBankCard.Name = "groupBoxBankCard";
-            this.groupBoxBankCard.Size = new System.Drawing.Size(401, 364);
+            this.groupBoxBankCard.Size = new System.Drawing.Size(401, 303);
             this.groupBoxBankCard.TabIndex = 3;
             this.groupBoxBankCard.TabStop = false;
             this.groupBoxBankCard.Text = "Bank Card";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 24);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "How long Valid";
+            // 
+            // textBox7
+            // 
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingBankCardSource, "HowLongValid", true));
+            this.textBox7.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(164, 140);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(231, 30);
+            this.textBox7.TabIndex = 19;
+            // 
+            // bindingBankCardSource
+            // 
+            this.bindingBankCardSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard);
+            // 
+            // textBox3
+            // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingAccountSource, "CurrentSum", true));
+            this.textBox3.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(164, 186);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(231, 30);
+            this.textBox3.TabIndex = 18;
+            // 
+            // bindingAccountSource
+            // 
+            this.bindingAccountSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IAccount);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 24);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Bank Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 98);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 24);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Card Number";
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingBankCardSource, "BankName", true));
+            this.textBox2.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(164, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(231, 30);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(31, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 24);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Current Sum";
+            // 
+            // textBox4
+            // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingBankCardSource, "BankCardNumber", true));
+            this.textBox4.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.Location = new System.Drawing.Point(164, 95);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(231, 30);
+            this.textBox4.TabIndex = 15;
+            // 
             // groupBoxInsurncePolicy
             // 
             this.groupBoxInsurncePolicy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBoxInsurncePolicy.Location = new System.Drawing.Point(789, 398);
+            this.groupBoxInsurncePolicy.Location = new System.Drawing.Point(789, 347);
             this.groupBoxInsurncePolicy.Name = "groupBoxInsurncePolicy";
             this.groupBoxInsurncePolicy.Size = new System.Drawing.Size(401, 273);
             this.groupBoxInsurncePolicy.TabIndex = 4;
@@ -470,152 +638,6 @@ namespace PL
             this.textBoxBriefName.Size = new System.Drawing.Size(249, 30);
             this.textBoxBriefName.TabIndex = 0;
             // 
-            // textBoxPasSurname
-            // 
-            this.textBoxPasSurname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "Surname", true));
-            this.textBoxPasSurname.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPasSurname.Location = new System.Drawing.Point(126, 95);
-            this.textBoxPasSurname.Name = "textBoxPasSurname";
-            this.textBoxPasSurname.ReadOnly = true;
-            this.textBoxPasSurname.Size = new System.Drawing.Size(220, 30);
-            this.textBoxPasSurname.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 98);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 24);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Surname";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 24);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Name";
-            // 
-            // textBoxPasName
-            // 
-            this.textBoxPasName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "Name", true));
-            this.textBoxPasName.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPasName.Location = new System.Drawing.Point(126, 48);
-            this.textBoxPasName.Name = "textBoxPasName";
-            this.textBoxPasName.ReadOnly = true;
-            this.textBoxPasName.Size = new System.Drawing.Size(220, 30);
-            this.textBoxPasName.TabIndex = 11;
-            // 
-            // iPassportBindingSource
-            // 
-            this.bindingPassportSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IPassport);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 24);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Bank Name";
-            // 
-            // textBox2
-            // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingBankCardSource, "BankName", true));
-            this.textBox2.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(147, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(220, 30);
-            this.textBox2.TabIndex = 15;
-            // 
-            // iUniversalBankCardBindingSource
-            // 
-            this.bindingBankCardSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard);
-            // 
-            // iAccountBindingSource
-            // 
-            this.iAccountBindingSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IAccount);
-            // 
-            // textBox3
-            // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.iAccountBindingSource, "CurrentSum", true));
-            this.textBox3.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(147, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(220, 30);
-            this.textBox3.TabIndex = 18;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 24);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Card Number";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 181);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 24);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Current Sum";
-            // 
-            // textBox4
-            // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingBankCardSource, "BankCardNumber", true));
-            this.textBox4.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(147, 95);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(220, 30);
-            this.textBox4.TabIndex = 15;
-            // 
-            // textBox5
-            // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "Age", true));
-            this.textBox5.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(126, 142);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(220, 30);
-            this.textBox5.TabIndex = 16;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(70, 145);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 24);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Age";
-            // 
-            // textBox6
-            // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "Age", true));
-            this.textBox6.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(126, 192);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(221, 30);
-            this.textBox6.TabIndex = 18;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingPassportSource, "PassportNumber", true));
-            this.label7.Location = new System.Drawing.Point(33, 195);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 24);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Number";
-            // 
             // DataManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -635,18 +657,18 @@ namespace PL
             ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).EndInit();
             this.groupBoxPassport.ResumeLayout(false);
             this.groupBoxPassport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).EndInit();
             this.groupBoxIDCode.ResumeLayout(false);
             this.groupBoxIDCode.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).EndInit();
             this.groupBoxBankCard.ResumeLayout(false);
             this.groupBoxBankCard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).EndInit();
             this.groupBoxShortInfo.ResumeLayout(false);
             this.groupBoxShortInfo.PerformLayout();
             this.groupBoxHasInfo.ResumeLayout(false);
             this.groupBoxHasInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iAccountBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -701,9 +723,11 @@ namespace PL
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.BindingSource iAccountBindingSource;
+        private System.Windows.Forms.BindingSource bindingAccountSource;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
