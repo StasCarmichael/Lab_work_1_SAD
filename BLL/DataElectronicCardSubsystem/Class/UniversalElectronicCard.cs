@@ -4,7 +4,7 @@ using BLL.DataElectronicCardSubsystem.Interface;
 
 namespace BLL.DataElectronicCardSubsystem.Class
 {
-    class UniversalElectronicCard : IUniversalElectronicCard
+    public class UniversalElectronicCard : IUniversalElectronicCard
     {
         public IIDCode IDCode { get; private set; }
         public string GetUniqueIdCode() { return IDCode?.GetUniqueIdCode() ?? null; }
