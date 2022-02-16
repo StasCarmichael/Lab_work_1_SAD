@@ -32,6 +32,7 @@ namespace PL
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataManagementForm));
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingElectonicCardSourse = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -45,6 +46,7 @@ namespace PL
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.groupBoxPassport = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.bindingPassportSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,14 +56,17 @@ namespace PL
             this.textBoxPasName = new System.Windows.Forms.TextBox();
             this.groupBoxIDCode = new System.Windows.Forms.GroupBox();
             this.textBoxFullId = new System.Windows.Forms.TextBox();
+            this.bindingIDCodeSource = new System.Windows.Forms.BindingSource(this.components);
             this.labFullId = new System.Windows.Forms.Label();
             this.groupBoxBankCard = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxBankOwnerCode = new System.Windows.Forms.TextBox();
+            this.bindingBankCardSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.bindingAccountSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -79,6 +84,7 @@ namespace PL
             this.textBoxPosileCurrentSum = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.bindingInsurancePolicySource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -116,30 +122,24 @@ namespace PL
             this.buttonNewBankCard = new System.Windows.Forms.Button();
             this.radioButtonPrivateBank = new System.Windows.Forms.RadioButton();
             this.radioButtonMonoBank = new System.Windows.Forms.RadioButton();
-            this.bindingElectonicCardSourse = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingInsurancePolicySource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingBankCardSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingAccountSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingIDCodeSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingPassportSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).BeginInit();
             this.groupBoxPassport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).BeginInit();
             this.groupBoxIDCode.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).BeginInit();
             this.groupBoxBankCard.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).BeginInit();
             this.groupBoxInsurncePolicy.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).BeginInit();
             this.groupBoxShortInfo.SuspendLayout();
             this.groupBoxHasInfo.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator
@@ -172,6 +172,10 @@ namespace PL
             this.bindingNavigator.Size = new System.Drawing.Size(394, 28);
             this.bindingNavigator.TabIndex = 0;
             this.bindingNavigator.Text = "bindingNavigator";
+            // 
+            // bindingElectonicCardSourse
+            // 
+            this.bindingElectonicCardSourse.DataSource = typeof(BLL.DataElectronicCardSubsystem.Class.UniversalElectronicCard);
             // 
             // bindingNavigatorCountItem
             // 
@@ -294,6 +298,10 @@ namespace PL
             this.textBox6.Size = new System.Drawing.Size(221, 30);
             this.textBox6.TabIndex = 18;
             // 
+            // bindingPassportSource
+            // 
+            this.bindingPassportSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IPassport);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -383,6 +391,10 @@ namespace PL
             this.textBoxFullId.Size = new System.Drawing.Size(249, 30);
             this.textBoxFullId.TabIndex = 7;
             // 
+            // bindingIDCodeSource
+            // 
+            this.bindingIDCodeSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IIDCode);
+            // 
             // labFullId
             // 
             this.labFullId.AutoSize = true;
@@ -443,6 +455,10 @@ namespace PL
             this.textBoxBankOwnerCode.Size = new System.Drawing.Size(231, 30);
             this.textBoxBankOwnerCode.TabIndex = 29;
             // 
+            // bindingBankCardSource
+            // 
+            this.bindingBankCardSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -471,6 +487,10 @@ namespace PL
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(231, 30);
             this.textBox3.TabIndex = 18;
+            // 
+            // bindingAccountSource
+            // 
+            this.bindingAccountSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IAccount);
             // 
             // label3
             // 
@@ -649,6 +669,10 @@ namespace PL
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(231, 30);
             this.textBox8.TabIndex = 25;
+            // 
+            // bindingInsurancePolicySource
+            // 
+            this.bindingInsurancePolicySource.DataSource = typeof(BLL.DataFunctionalSubsystem.Class.UHGUniversalInsurancePolicy);
             // 
             // textBox10
             // 
@@ -1058,30 +1082,6 @@ namespace PL
             this.radioButtonMonoBank.Text = "Mono Bank";
             this.radioButtonMonoBank.UseVisualStyleBackColor = true;
             // 
-            // bindingElectonicCardSourse
-            // 
-            this.bindingElectonicCardSourse.DataSource = typeof(BLL.DataElectronicCardSubsystem.Class.UniversalElectronicCard);
-            // 
-            // bindingInsurancePolicySource
-            // 
-            this.bindingInsurancePolicySource.DataSource = typeof(BLL.DataFunctionalSubsystem.Class.UHGUniversalInsurancePolicy);
-            // 
-            // bindingBankCardSource
-            // 
-            this.bindingBankCardSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard);
-            // 
-            // bindingAccountSource
-            // 
-            this.bindingAccountSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IAccount);
-            // 
-            // bindingIDCodeSource
-            // 
-            this.bindingIDCodeSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IIDCode);
-            // 
-            // bindingPassportSource
-            // 
-            this.bindingPassportSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IPassport);
-            // 
             // DataManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1105,27 +1105,34 @@ namespace PL
             this.Controls.Add(this.groupBoxIDCode);
             this.Controls.Add(this.groupBoxPassport);
             this.Controls.Add(this.bindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1220, 770);
             this.MinimumSize = new System.Drawing.Size(1220, 770);
             this.Name = "DataManagementForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DataManagementForm";
+            this.Text = "Universal Electronic Card";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DataManagementForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
             this.bindingNavigator.ResumeLayout(false);
             this.bindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).EndInit();
             this.groupBoxPassport.ResumeLayout(false);
             this.groupBoxPassport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).EndInit();
             this.groupBoxIDCode.ResumeLayout(false);
             this.groupBoxIDCode.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).EndInit();
             this.groupBoxBankCard.ResumeLayout(false);
             this.groupBoxBankCard.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).EndInit();
             this.groupBoxInsurncePolicy.ResumeLayout(false);
             this.groupBoxInsurncePolicy.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).EndInit();
             this.groupBoxShortInfo.ResumeLayout(false);
             this.groupBoxShortInfo.PerformLayout();
             this.groupBoxHasInfo.ResumeLayout(false);
@@ -1134,12 +1141,6 @@ namespace PL
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

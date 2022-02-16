@@ -84,5 +84,9 @@
       <Name>DataService</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DataCreationClassDiagram.cd" />
+    <None Include="DataFunctionalClassDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

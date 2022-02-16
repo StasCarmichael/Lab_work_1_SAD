@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.DataPackingSubsystem.Class.AdministrativeServiceCenter">
+    <Position X="1" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAAAACAABAAgBCAAAAAAAAAAAAQAAAAEAAAgCAA=</HashCode>
+      <FileName>DataPackingSubsystem\Class\AdministrativeServiceCenter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="CodeBuilder" />
+      <Field Name="PassportService" />
+      <Field Name="UniversalElectronicCard" />
+      <Property Name="Bank" />
+      <Property Name="InsuranceAgency" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BLL.DataCreationSubsystem.Class.IDCodeBuilder" Collapsed="true">
+    <Position X="5.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAEAAABAAAAAAAAAABAICAAAAAAQAAAgAAAAAgQARA=</HashCode>
+      <FileName>DataCreationSubsystem\Class\IDCodeBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.DataCreationSubsystem.Class.MonoBank" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEMjAAAAAAAAAACAAACAAAAAAAAAAAQAAAAAAAABAAA=</HashCode>
+      <FileName>DataCreationSubsystem\Class\MonoBank.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BLL.DataCreationSubsystem.Class.PrivateBank" Collapsed="true">
+    <Position X="14.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEMjAAAAAAAAAACAAACAAAAAAAAAAAQAAAAAAAABAAA=</HashCode>
+      <FileName>DataCreationSubsystem\Class\PrivateBank.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BLL.DataCreationSubsystem.Class.UHGInsuranceAgency">
+    <Position X="4.5" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataCreationSubsystem\Class\UHGInsuranceAgency.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BLL.DataCreationSubsystem.Class.UkrainianPassportService" Collapsed="true">
+    <Position X="10.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAACAAAAAAAAAAgAAAAAAAEgA=</HashCode>
+      <FileName>DataCreationSubsystem\Class\UkrainianPassportService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BLL.DataElectronicCardSubsystem.Class.UniversalElectronicCard">
+    <Position X="8" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAABAAAAAAACAEARgACAQQBAIBAAAAAgAAAAAACBA=</HashCode>
+      <FileName>DataElectronicCardSubsystem\Class\UniversalElectronicCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BankCard" />
+      <Property Name="IDCode" />
+      <Property Name="InsurancePolicy" />
+      <Property Name="Passport" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="BLL.DataPackingSubsystem.Interface.IAdministrativeServiceCenter">
+    <Position X="1" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQCAAAAAAAAABAAABAAAAAAAAAAAAAQAAAAEAAAgAAA=</HashCode>
+      <FileName>DataPackingSubsystem\Interface\IAdministrativeServiceCenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataCreationSubsystem.Interface.IBank">
+    <Position X="12.5" Y="6.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataCreationSubsystem\Interface\IBank.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataCreationSubsystem.Interface.IInsuranceAgency">
+    <Position X="4.5" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataCreationSubsystem\Interface\IInsuranceAgency.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataCreationSubsystem.Interface.IPassportService">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>DataCreationSubsystem\Interface\IPassportService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataElectronicCardSubsystem.Interface.IUniversalElectronicCard" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataElectronicCardSubsystem\Interface\IUniversalElectronicCard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAQAAAAAAA=</HashCode>
+      <FileName>DataFunctionalSubsystem\Interface\IUniversalBankCard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataFunctionalSubsystem.Interface.IIDCode" Collapsed="true">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataFunctionalSubsystem\Interface\IIDCode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataFunctionalSubsystem.Interface.IUniversalInsurancePolicy" Collapsed="true">
+    <Position X="12" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAADAAAAAAAAAgAAAAAAAAAAQAgAAAAA=</HashCode>
+      <FileName>DataFunctionalSubsystem\Interface\IUniversalInsurancePolicy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BLL.DataFunctionalSubsystem.Interface.IPassport" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAQABAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>DataFunctionalSubsystem\Interface\IPassport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

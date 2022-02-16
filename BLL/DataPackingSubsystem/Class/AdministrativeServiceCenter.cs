@@ -115,12 +115,13 @@ namespace BLL.DataPackingSubsystem.Class
                 }
 
                 UniversalElectronicCard.AddNewInsurancePolicy(InsuranceAgency.CreateUniversalInsurancePolicy(UniversalElectronicCard.IDCode, UniversalElectronicCard.BankCard));
+                MessageEvent?.Invoke(this, "Страховий поліс успішно створено.");
+                return;
             }
             catch (Exception)
             {
                 MessageEvent?.Invoke(this, "Помилка при створені страхового полісу.");
             }
-
         }
 
         public IUniversalElectronicCard ReturnNewElectronicCard()

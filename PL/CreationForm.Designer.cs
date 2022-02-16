@@ -209,7 +209,7 @@ namespace PL
             this.MinimumSize = new System.Drawing.Size(460, 480);
             this.Name = "CreationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "Creator Form";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreationForm_FormClosing);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
