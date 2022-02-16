@@ -48,6 +48,7 @@ namespace BLL.DataPackingSubsystem.Class
         public IInsuranceAgency InsuranceAgency { get; set; }
 
 
+        #region BuilderInterface
 
         public void Reset()
         {
@@ -85,7 +86,7 @@ namespace BLL.DataPackingSubsystem.Class
 
                 UniversalElectronicCard.AddNewBankCard(Bank.CreateUniversalBankCard(UniversalElectronicCard.IDCode));
 
-                MessageEvent?.Invoke(this, "Банківська катра упішно створена");
+                MessageEvent?.Invoke(this, "Банківська катра уcпішно створена");
             }
             catch (Exception)
             {
@@ -122,17 +123,12 @@ namespace BLL.DataPackingSubsystem.Class
 
         }
 
-        /// <summary>
-        /// Когда возвращаем об'єкт то обєкт в памяти = null 
-        /// </summary>
-        /// <returns></returns>
         public IUniversalElectronicCard ReturnNewElectronicCard()
         {
-            IUniversalElectronicCard electronicCard = UniversalElectronicCard;
-            UniversalElectronicCard = null;
-            return electronicCard;
+            return UniversalElectronicCard;
         }
 
+        #endregion
 
     }
 }

@@ -24,7 +24,7 @@ namespace BLL.DataFunctionalSubsystem.Class
             if (CurrentSum < sum) { return false; }
 
             CurrentSum -= sum;
-            return false;
+            return true;
         }
 
 

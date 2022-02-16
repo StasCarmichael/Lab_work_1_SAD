@@ -32,7 +32,6 @@ namespace PL
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataManagementForm));
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingElectonicCardSourse = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -46,7 +45,6 @@ namespace PL
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.groupBoxPassport = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.bindingPassportSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,17 +54,14 @@ namespace PL
             this.textBoxPasName = new System.Windows.Forms.TextBox();
             this.groupBoxIDCode = new System.Windows.Forms.GroupBox();
             this.textBoxFullId = new System.Windows.Forms.TextBox();
-            this.bindingIDCodeSource = new System.Windows.Forms.BindingSource(this.components);
             this.labFullId = new System.Windows.Forms.Label();
             this.groupBoxBankCard = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBoxBankOwnerCode = new System.Windows.Forms.TextBox();
-            this.bindingBankCardSource = new System.Windows.Forms.BindingSource(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.bindingAccountSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -74,15 +69,14 @@ namespace PL
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBoxInsurncePolicy = new System.Windows.Forms.GroupBox();
             this.checkBoxActivated = new System.Windows.Forms.CheckBox();
-            this.bindingInsurancePolicySource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonActivate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxPolicyOwnerCode = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBoxPolicyCardNumber = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxPosileCurrentSum = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -105,27 +99,47 @@ namespace PL
             this.labName = new System.Windows.Forms.Label();
             this.textBoxBriefName = new System.Windows.Forms.TextBox();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.textBoxSurname = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.buttonAddNewPassport = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxSum = new System.Windows.Forms.TextBox();
+            this.buttonPutMoney = new System.Windows.Forms.Button();
+            this.buttonWithdrawMoney = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonNewInsurmcePolicy = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.buttonNewBankCard = new System.Windows.Forms.Button();
+            this.radioButtonPrivateBank = new System.Windows.Forms.RadioButton();
+            this.radioButtonMonoBank = new System.Windows.Forms.RadioButton();
+            this.bindingElectonicCardSourse = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingInsurancePolicySource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingBankCardSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingAccountSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingIDCodeSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingPassportSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).BeginInit();
             this.groupBoxPassport.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).BeginInit();
             this.groupBoxIDCode.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).BeginInit();
             this.groupBoxBankCard.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).BeginInit();
             this.groupBoxInsurncePolicy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBoxShortInfo.SuspendLayout();
             this.groupBoxHasInfo.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator
@@ -158,10 +172,6 @@ namespace PL
             this.bindingNavigator.Size = new System.Drawing.Size(394, 28);
             this.bindingNavigator.TabIndex = 0;
             this.bindingNavigator.Text = "bindingNavigator";
-            // 
-            // bindingElectonicCardSourse
-            // 
-            this.bindingElectonicCardSourse.DataSource = typeof(BLL.DataElectronicCardSubsystem.Class.UniversalElectronicCard);
             // 
             // bindingNavigatorCountItem
             // 
@@ -267,9 +277,9 @@ namespace PL
             this.groupBoxPassport.Controls.Add(this.label1);
             this.groupBoxPassport.Controls.Add(this.textBoxPasName);
             this.groupBoxPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBoxPassport.Location = new System.Drawing.Point(420, 25);
+            this.groupBoxPassport.Location = new System.Drawing.Point(413, 25);
             this.groupBoxPassport.Name = "groupBoxPassport";
-            this.groupBoxPassport.Size = new System.Drawing.Size(353, 239);
+            this.groupBoxPassport.Size = new System.Drawing.Size(358, 239);
             this.groupBoxPassport.TabIndex = 1;
             this.groupBoxPassport.TabStop = false;
             this.groupBoxPassport.Text = "Passport";
@@ -283,10 +293,6 @@ namespace PL
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(221, 30);
             this.textBox6.TabIndex = 18;
-            // 
-            // bindingPassportSource
-            // 
-            this.bindingPassportSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IPassport);
             // 
             // label7
             // 
@@ -360,9 +366,9 @@ namespace PL
             this.groupBoxIDCode.Controls.Add(this.textBoxFullId);
             this.groupBoxIDCode.Controls.Add(this.labFullId);
             this.groupBoxIDCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBoxIDCode.Location = new System.Drawing.Point(420, 284);
+            this.groupBoxIDCode.Location = new System.Drawing.Point(413, 284);
             this.groupBoxIDCode.Name = "groupBoxIDCode";
-            this.groupBoxIDCode.Size = new System.Drawing.Size(353, 80);
+            this.groupBoxIDCode.Size = new System.Drawing.Size(358, 80);
             this.groupBoxIDCode.TabIndex = 2;
             this.groupBoxIDCode.TabStop = false;
             this.groupBoxIDCode.Text = "ID";
@@ -376,10 +382,6 @@ namespace PL
             this.textBoxFullId.ReadOnly = true;
             this.textBoxFullId.Size = new System.Drawing.Size(249, 30);
             this.textBoxFullId.TabIndex = 7;
-            // 
-            // bindingIDCodeSource
-            // 
-            this.bindingIDCodeSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IIDCode);
             // 
             // labFullId
             // 
@@ -441,10 +443,6 @@ namespace PL
             this.textBoxBankOwnerCode.Size = new System.Drawing.Size(231, 30);
             this.textBoxBankOwnerCode.TabIndex = 29;
             // 
-            // bindingBankCardSource
-            // 
-            this.bindingBankCardSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -473,10 +471,6 @@ namespace PL
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(231, 30);
             this.textBox3.TabIndex = 18;
-            // 
-            // bindingAccountSource
-            // 
-            this.bindingAccountSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IAccount);
             // 
             // label3
             // 
@@ -549,17 +543,12 @@ namespace PL
             // 
             this.checkBoxActivated.AutoCheck = false;
             this.checkBoxActivated.AutoSize = true;
-            this.checkBoxActivated.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bindingInsurancePolicySource, "IsActivated", true));
             this.checkBoxActivated.Location = new System.Drawing.Point(26, 312);
             this.checkBoxActivated.Name = "checkBoxActivated";
             this.checkBoxActivated.Size = new System.Drawing.Size(114, 28);
             this.checkBoxActivated.TabIndex = 34;
             this.checkBoxActivated.Text = "Activated";
             this.checkBoxActivated.UseVisualStyleBackColor = true;
-            // 
-            // bindingInsurancePolicySource
-            // 
-            this.bindingInsurancePolicySource.DataSource = typeof(BLL.DataFunctionalSubsystem.Class.UHGUniversalInsurancePolicy);
             // 
             // buttonActivate
             // 
@@ -577,10 +566,10 @@ namespace PL
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.textBoxPolicyOwnerCode);
-            this.groupBox1.Controls.Add(this.textBox12);
+            this.groupBox1.Controls.Add(this.textBoxPolicyCardNumber);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.textBoxPosileCurrentSum);
             this.groupBox1.Location = new System.Drawing.Point(10, 146);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(385, 147);
@@ -606,15 +595,14 @@ namespace PL
             this.textBoxPolicyOwnerCode.Size = new System.Drawing.Size(231, 30);
             this.textBoxPolicyOwnerCode.TabIndex = 27;
             // 
-            // textBox12
+            // textBoxPolicyCardNumber
             // 
-            this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingBankCardSource, "BankCardNumber", true));
-            this.textBox12.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox12.Location = new System.Drawing.Point(147, 73);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(231, 30);
-            this.textBox12.TabIndex = 30;
+            this.textBoxPolicyCardNumber.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPolicyCardNumber.Location = new System.Drawing.Point(147, 73);
+            this.textBoxPolicyCardNumber.Name = "textBoxPolicyCardNumber";
+            this.textBoxPolicyCardNumber.ReadOnly = true;
+            this.textBoxPolicyCardNumber.Size = new System.Drawing.Size(231, 30);
+            this.textBoxPolicyCardNumber.TabIndex = 30;
             // 
             // label12
             // 
@@ -634,14 +622,14 @@ namespace PL
             this.label14.TabIndex = 28;
             this.label14.Text = "Current Sum";
             // 
-            // textBox11
+            // textBoxPosileCurrentSum
             // 
-            this.textBox11.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox11.Location = new System.Drawing.Point(147, 109);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(231, 30);
-            this.textBox11.TabIndex = 29;
+            this.textBoxPosileCurrentSum.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPosileCurrentSum.Location = new System.Drawing.Point(147, 109);
+            this.textBoxPosileCurrentSum.Name = "textBoxPosileCurrentSum";
+            this.textBoxPosileCurrentSum.ReadOnly = true;
+            this.textBoxPosileCurrentSum.Size = new System.Drawing.Size(231, 30);
+            this.textBoxPosileCurrentSum.TabIndex = 29;
             // 
             // label9
             // 
@@ -882,50 +870,217 @@ namespace PL
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(116, 607);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 21);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker.Location = new System.Drawing.Point(136, 605);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(237, 22);
+            this.dateTimePicker.TabIndex = 6;
             // 
-            // textBox13
+            // textBoxSurname
             // 
-            this.textBox13.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox13.Location = new System.Drawing.Point(105, 565);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(249, 27);
-            this.textBox13.TabIndex = 14;
+            this.textBoxSurname.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSurname.Location = new System.Drawing.Point(124, 565);
+            this.textBoxSurname.MaxLength = 50;
+            this.textBoxSurname.Name = "textBoxSurname";
+            this.textBoxSurname.Size = new System.Drawing.Size(249, 27);
+            this.textBoxSurname.TabIndex = 14;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(50, 573);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(37, 568);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.Size = new System.Drawing.Size(81, 20);
             this.label16.TabIndex = 13;
             this.label16.Text = "Surname";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(60, 537);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(63, 532);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 13);
+            this.label17.Size = new System.Drawing.Size(55, 20);
             this.label17.TabIndex = 12;
             this.label17.Text = "Name";
             // 
-            // textBox14
+            // textBoxName
             // 
-            this.textBox14.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox14.Location = new System.Drawing.Point(105, 529);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(249, 27);
-            this.textBox14.TabIndex = 11;
+            this.textBoxName.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxName.Location = new System.Drawing.Point(124, 529);
+            this.textBoxName.MaxLength = 50;
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(249, 27);
+            this.textBoxName.TabIndex = 11;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(20, 607);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(110, 20);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Date of birth";
+            // 
+            // buttonAddNewPassport
+            // 
+            this.buttonAddNewPassport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonAddNewPassport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddNewPassport.Location = new System.Drawing.Point(114, 642);
+            this.buttonAddNewPassport.Name = "buttonAddNewPassport";
+            this.buttonAddNewPassport.Size = new System.Drawing.Size(218, 39);
+            this.buttonAddNewPassport.TabIndex = 16;
+            this.buttonAddNewPassport.Text = "Create new Passport";
+            this.buttonAddNewPassport.UseVisualStyleBackColor = false;
+            this.buttonAddNewPassport.Click += new System.EventHandler(this.buttonAddNewPassport_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(10, 33);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(52, 24);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "Sum";
+            // 
+            // textBoxSum
+            // 
+            this.textBoxSum.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSum.Location = new System.Drawing.Point(68, 30);
+            this.textBoxSum.MaxLength = 10;
+            this.textBoxSum.Name = "textBoxSum";
+            this.textBoxSum.Size = new System.Drawing.Size(278, 30);
+            this.textBoxSum.TabIndex = 17;
+            // 
+            // buttonPutMoney
+            // 
+            this.buttonPutMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonPutMoney.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPutMoney.Location = new System.Drawing.Point(10, 66);
+            this.buttonPutMoney.Name = "buttonPutMoney";
+            this.buttonPutMoney.Size = new System.Drawing.Size(145, 59);
+            this.buttonPutMoney.TabIndex = 19;
+            this.buttonPutMoney.Text = "Put Money";
+            this.buttonPutMoney.UseVisualStyleBackColor = false;
+            this.buttonPutMoney.Click += new System.EventHandler(this.buttonPutMoney_Click);
+            // 
+            // buttonWithdrawMoney
+            // 
+            this.buttonWithdrawMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.buttonWithdrawMoney.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonWithdrawMoney.Location = new System.Drawing.Point(202, 66);
+            this.buttonWithdrawMoney.Name = "buttonWithdrawMoney";
+            this.buttonWithdrawMoney.Size = new System.Drawing.Size(145, 59);
+            this.buttonWithdrawMoney.TabIndex = 20;
+            this.buttonWithdrawMoney.Text = "Withdraw Money";
+            this.buttonWithdrawMoney.UseVisualStyleBackColor = false;
+            this.buttonWithdrawMoney.Click += new System.EventHandler(this.buttonWithdrawMoney_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonWithdrawMoney);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.buttonPutMoney);
+            this.groupBox3.Controls.Add(this.textBoxSum);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Location = new System.Drawing.Point(413, 382);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(358, 131);
+            this.groupBox3.TabIndex = 21;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Сard Transactions";
+            // 
+            // buttonNewInsurmcePolicy
+            // 
+            this.buttonNewInsurmcePolicy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.buttonNewInsurmcePolicy.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonNewInsurmcePolicy.Location = new System.Drawing.Point(423, 634);
+            this.buttonNewInsurmcePolicy.Name = "buttonNewInsurmcePolicy";
+            this.buttonNewInsurmcePolicy.Size = new System.Drawing.Size(337, 47);
+            this.buttonNewInsurmcePolicy.TabIndex = 21;
+            this.buttonNewInsurmcePolicy.Text = "Create new Insurmce Policy";
+            this.buttonNewInsurmcePolicy.UseVisualStyleBackColor = false;
+            this.buttonNewInsurmcePolicy.Click += new System.EventHandler(this.buttonNewInsurmcePolicy_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.Controls.Add(this.buttonNewBankCard);
+            this.groupBox4.Controls.Add(this.radioButtonPrivateBank);
+            this.groupBox4.Controls.Add(this.radioButtonMonoBank);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox4.Location = new System.Drawing.Point(413, 520);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(358, 107);
+            this.groupBox4.TabIndex = 22;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Bank Card Creator";
+            // 
+            // buttonNewBankCard
+            // 
+            this.buttonNewBankCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonNewBankCard.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonNewBankCard.Location = new System.Drawing.Point(201, 31);
+            this.buttonNewBankCard.Name = "buttonNewBankCard";
+            this.buttonNewBankCard.Size = new System.Drawing.Size(145, 59);
+            this.buttonNewBankCard.TabIndex = 21;
+            this.buttonNewBankCard.Text = "Create new Bank Card";
+            this.buttonNewBankCard.UseVisualStyleBackColor = false;
+            this.buttonNewBankCard.Click += new System.EventHandler(this.buttonNewBankCard_Click);
+            // 
+            // radioButtonPrivateBank
+            // 
+            this.radioButtonPrivateBank.AutoSize = true;
+            this.radioButtonPrivateBank.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonPrivateBank.Location = new System.Drawing.Point(14, 63);
+            this.radioButtonPrivateBank.Name = "radioButtonPrivateBank";
+            this.radioButtonPrivateBank.Size = new System.Drawing.Size(138, 24);
+            this.radioButtonPrivateBank.TabIndex = 1;
+            this.radioButtonPrivateBank.Text = "Private Bank";
+            this.radioButtonPrivateBank.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMonoBank
+            // 
+            this.radioButtonMonoBank.AutoSize = true;
+            this.radioButtonMonoBank.Checked = true;
+            this.radioButtonMonoBank.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonMonoBank.Location = new System.Drawing.Point(14, 31);
+            this.radioButtonMonoBank.Name = "radioButtonMonoBank";
+            this.radioButtonMonoBank.Size = new System.Drawing.Size(121, 24);
+            this.radioButtonMonoBank.TabIndex = 0;
+            this.radioButtonMonoBank.TabStop = true;
+            this.radioButtonMonoBank.Text = "Mono Bank";
+            this.radioButtonMonoBank.UseVisualStyleBackColor = true;
+            // 
+            // bindingElectonicCardSourse
+            // 
+            this.bindingElectonicCardSourse.DataSource = typeof(BLL.DataElectronicCardSubsystem.Class.UniversalElectronicCard);
+            // 
+            // bindingInsurancePolicySource
+            // 
+            this.bindingInsurancePolicySource.DataSource = typeof(BLL.DataFunctionalSubsystem.Class.UHGUniversalInsurancePolicy);
+            // 
+            // bindingBankCardSource
+            // 
+            this.bindingBankCardSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IUniversalBankCard);
+            // 
+            // bindingAccountSource
+            // 
+            this.bindingAccountSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IAccount);
+            // 
+            // bindingIDCodeSource
+            // 
+            this.bindingIDCodeSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IIDCode);
+            // 
+            // bindingPassportSource
+            // 
+            this.bindingPassportSource.DataSource = typeof(BLL.DataFunctionalSubsystem.Interface.IPassport);
             // 
             // DataManagementForm
             // 
@@ -933,46 +1088,58 @@ namespace PL
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1204, 731);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.buttonNewInsurmcePolicy);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.buttonAddNewPassport);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBoxSurname);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.groupBoxShortInfo);
             this.Controls.Add(this.groupBoxInsurncePolicy);
             this.Controls.Add(this.groupBoxBankCard);
             this.Controls.Add(this.groupBoxIDCode);
             this.Controls.Add(this.groupBoxPassport);
             this.Controls.Add(this.bindingNavigator);
+            this.MaximumSize = new System.Drawing.Size(1220, 770);
+            this.MinimumSize = new System.Drawing.Size(1220, 770);
             this.Name = "DataManagementForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DataManagementForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DataManagementForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).EndInit();
             this.bindingNavigator.ResumeLayout(false);
             this.bindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).EndInit();
             this.groupBoxPassport.ResumeLayout(false);
             this.groupBoxPassport.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).EndInit();
             this.groupBoxIDCode.ResumeLayout(false);
             this.groupBoxIDCode.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).EndInit();
             this.groupBoxBankCard.ResumeLayout(false);
             this.groupBoxBankCard.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).EndInit();
             this.groupBoxInsurncePolicy.ResumeLayout(false);
             this.groupBoxInsurncePolicy.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBoxShortInfo.ResumeLayout(false);
             this.groupBoxShortInfo.PerformLayout();
             this.groupBoxHasInfo.ResumeLayout(false);
             this.groupBoxHasInfo.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingElectonicCardSourse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingInsurancePolicySource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingBankCardSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingAccountSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingIDCodeSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingPassportSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1050,14 +1217,26 @@ namespace PL
         private System.Windows.Forms.Button buttonActivate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBoxPolicyCardNumber;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBoxPosileCurrentSum;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.TextBox textBoxSurname;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button buttonAddNewPassport;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxSum;
+        private System.Windows.Forms.Button buttonPutMoney;
+        private System.Windows.Forms.Button buttonWithdrawMoney;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button buttonNewInsurmcePolicy;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButtonPrivateBank;
+        private System.Windows.Forms.RadioButton radioButtonMonoBank;
+        private System.Windows.Forms.Button buttonNewBankCard;
     }
 }
