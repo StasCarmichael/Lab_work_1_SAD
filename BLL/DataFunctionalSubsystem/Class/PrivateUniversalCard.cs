@@ -3,6 +3,7 @@ using BLL.DataFunctionalSubsystem.Interface;
 
 namespace BLL.DataFunctionalSubsystem.Class
 {
+    [Serializable]
     public class PrivateUniversalCard : IUniversalBankCard
     {
         internal PrivateUniversalCard() { CurrentSum = 0; BankName = "Private Bank"; }

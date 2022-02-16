@@ -1,8 +1,10 @@
-﻿using BLL.DataFunctionalSubsystem.Interface;
+﻿using System;
+using BLL.DataFunctionalSubsystem.Interface;
 using BLL.RegExpressions;
 
 namespace BLL.DataFunctionalSubsystem.Class
 {
+    [Serializable]
     public sealed class IDCode : IIDCode
     {
         private string code;

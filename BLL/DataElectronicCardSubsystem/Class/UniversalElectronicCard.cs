@@ -1,9 +1,10 @@
-﻿using BLL.DataFunctionalSubsystem.Interface;
-using BLL.DataCreationSubsystem.Interface;
+﻿using System;
+using BLL.DataFunctionalSubsystem.Interface;
 using BLL.DataElectronicCardSubsystem.Interface;
 
 namespace BLL.DataElectronicCardSubsystem.Class
 {
+    [Serializable]
     public class UniversalElectronicCard : IUniversalElectronicCard
     {
         public IIDCode IDCode { get; private set; }

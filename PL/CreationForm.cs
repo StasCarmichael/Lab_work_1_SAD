@@ -66,7 +66,7 @@ namespace PL
         private void AdminCenterHandler(object sender, string str) => MessageBox.Show(str);
 
 
-        #region MyRegion
+        #region CreationMenu
 
         private void buttonAddNewUser_Click(object sender, EventArgs e)
         {
@@ -111,8 +111,6 @@ namespace PL
         }
 
         #endregion
-
-
 
 
         private void CreationForm_FormClosing(object sender, FormClosingEventArgs e)

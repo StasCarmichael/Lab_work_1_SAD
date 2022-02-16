@@ -3,6 +3,7 @@ using BLL.DataFunctionalSubsystem.Interface;
 
 namespace BLL.DataFunctionalSubsystem.Class
 {
+    [Serializable]
     public class UHGUniversalInsurancePolicy : IUniversalInsurancePolicy
     {
         const decimal COST = 500;

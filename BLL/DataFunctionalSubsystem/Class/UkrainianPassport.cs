@@ -6,6 +6,7 @@ using BLL.RegExpressions;
 
 namespace BLL.DataFunctionalSubsystem.Class
 {
+    [Serializable]
     public class UkrainianPassport : IPassport
     {
         private string name;
