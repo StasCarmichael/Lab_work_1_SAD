@@ -52,13 +52,13 @@ namespace PL
 
 
 
-        public CreationForm(DataManagementForm _managementForm)
+        public CreationForm(DataManagementForm _managementForm, string idBuilderPath)
         {
             InitializeComponent();
 
             managementForm = _managementForm;
-            //TODO :Need fix bug
-            CreateSuportService("sdfs");
+ 
+            CreateSuportService(idBuilderPath);
         }
 
 
@@ -121,7 +121,7 @@ namespace PL
                 managementForm.AddElectronicCard(administrativeServiceCenter.ReturnNewElectronicCard());
             }
         }
-        private void buttonGoBack_Click(object sender, EventArgs e) => this.Close();
+        private void buttonGoBack_Click(object sender, EventArgs e) {this.Close(); this.Dispose(); }
 
 
     }

@@ -32,6 +32,8 @@ namespace PL
 
         private CreationForm creationForm;
 
+        private readonly string idBuiderPath;
+        private readonly string dbConectionPath;
 
         private IPassportService passportService;
         private IDCodeBuilder iDCodeBuilder;
@@ -40,6 +42,9 @@ namespace PL
         private IInsuranceAgency insuranceAgency;
 
         #endregion
+
+
+        #region Subsystem
 
         private void CreateSuportService(string path)
         {
@@ -56,17 +61,25 @@ namespace PL
             bindingNavigatorAddNewItem.Click += UpdateInfoHandler;
         }
 
+        #endregion
+
 
         private void bindingNavigatorAddNewItem_Click_NewForm(object sender, EventArgs e)
         {
             if (creationForm == null)
             {
-                creationForm = new CreationForm(this);
+                creationForm = new CreationForm(this, idBuiderPath);
+                creationForm.Show();
+            }
+
+            if (creationForm.IsDisposed)
+            {
+                creationForm = new CreationForm(this, idBuiderPath);
                 creationForm.Show();
             }
         }
 
-       
+
 
         #region DAL_Conection
 
@@ -110,31 +123,36 @@ namespace PL
         #endregion
 
 
+        //ctor
+        public DataManagementForm(string idPath, string dbPath)
+        {
+            InitializeComponent();
+
+            idBuiderPath = idPath;
+            dbConectionPath = dbPath;
+
+            CreateSuportService(idBuiderPath);
+            SubscribeUpdateHandler();
+
+            ConectionDB(dbConectionPath);
+            AddDataInSourseBinding(GetData());
+        }
+
+
+
+        #region InteractWithBindingSourse
+
+        public void AddElectronicCard(IUniversalElectronicCard electronicCard)
+        {
+            bindingElectonicCardSourse.Add(electronicCard as UniversalElectronicCard);
+        }
         private void AddDataInSourseBinding(List<UniversalElectronicCard> data)
         {
             foreach (var item in data)
                 bindingElectonicCardSourse.Add(item);
         }
 
-        public DataManagementForm()
-        {
-            //TODO
-            InitializeComponent();
-
-            CreateSuportService("data.dat");
-            SubscribeUpdateHandler();
-
-
-            ConectionDB("DB.dat");
-            AddDataInSourseBinding(GetData());
-        }
-
-
-
-        public void AddElectronicCard(IUniversalElectronicCard electronicCard)
-        {
-            bindingElectonicCardSourse.Add(electronicCard as UniversalElectronicCard);
-        }
+        #endregion
 
 
         #region UpdateDataOnForm
@@ -190,7 +208,6 @@ namespace PL
         #endregion
 
 
-
         #region HendlerForNavigator
 
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e) => UpdateInfo();
@@ -204,6 +221,7 @@ namespace PL
 
 
         #region ButtonHandler
+
 
         private void buttonActivate_Click(object sender, EventArgs e)
         {
@@ -309,7 +327,6 @@ namespace PL
         #endregion
 
 
-
         #region CreatorMethodHandler
 
         private void buttonAddNewPassport_Click(object sender, EventArgs e)
@@ -345,7 +362,6 @@ namespace PL
                 }
             }
         }
-
         private void buttonNewBankCard_Click(object sender, EventArgs e)
         {
             var objEletronicCard = bindingElectonicCardSourse.Current;
@@ -369,7 +385,6 @@ namespace PL
                 }
             }
         }
-
         private void buttonNewInsurmcePolicy_Click(object sender, EventArgs e)
         {
             var objEletronicCard = bindingElectonicCardSourse.Current;
@@ -395,8 +410,8 @@ namespace PL
         #endregion
 
 
-
         #endregion
+
 
 
         private void DataManagementForm_FormClosing(object sender, FormClosingEventArgs e) => SaveChange();

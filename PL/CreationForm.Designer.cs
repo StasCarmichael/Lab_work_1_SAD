@@ -29,6 +29,7 @@ namespace PL
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreationForm));
             this.buttonGoBack = new System.Windows.Forms.Button();
             this.buttonAddNewUser = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
@@ -203,6 +204,9 @@ namespace PL
             this.Controls.Add(this.label17);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.buttonGoBack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(460, 480);
+            this.MinimumSize = new System.Drawing.Size(460, 480);
             this.Name = "CreationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Configuration;
 using System.Windows.Forms;
 
 using PL;
@@ -16,9 +14,12 @@ namespace Project
         [STAThread]
         static void Main()
         {
+            var idCodeBuilderPath = ConfigurationManager.AppSettings.Get("CodeBuilderPath");
+            var dbPath = ConfigurationManager.AppSettings.Get("DBPath");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DataManagementForm());
+            Application.Run(new DataManagementForm(idCodeBuilderPath, dbPath));
         }
     }
 }
