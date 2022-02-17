@@ -34,7 +34,7 @@ namespace Test
 
             iDCodeBuilder.SaveChange();
 
-            Assert.True(elestronicCard.IsValid());
+            Assert.False(elestronicCard.IsValid());
         }
 
 

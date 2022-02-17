@@ -195,7 +195,7 @@ namespace PL
                     textBoxPolicyCardNumber.Text = electronicCard?.InsurancePolicy?.PaymentMethod?.BankCardNumber ?? null;
                     textBoxPosileCurrentSum.Text = (electronicCard?.InsurancePolicy?.PaymentMethod?.CurrentSum ?? null).ToString();
 
-                    checkBoxActivated.Checked = electronicCard?.InsurancePolicy?.IsActivated ?? false;
+                    checkBoxActivated.Checked = electronicCard?.InsurancePolicy?.IsValid() ?? false;
                 }
             }
             else

@@ -10,7 +10,6 @@ namespace BLL.DataFunctionalSubsystem.Class
         const decimal MAX_INSURANCE_COVERAGE = 100000;
 
         const int VALID_TIME = 1;
-        const int FIRST_DAY = 1;
 
 
         internal UHGUniversalInsurancePolicy(IIDCode owner, IUniversalBankCard paymentMethod)
@@ -43,7 +42,7 @@ namespace BLL.DataFunctionalSubsystem.Class
                 {
                     PaymentMethod.WithdrawMoney(InsuranceCost);
                     AmountOfInsuranceCoverage = MAX_INSURANCE_COVERAGE;
-                    HowLongValid = new DateTime(DateTime.Now.Year + VALID_TIME, DateTime.Now.Month, FIRST_DAY);
+                    HowLongValid = new DateTime(DateTime.Now.Year + VALID_TIME, DateTime.Now.Month, DateTime.Now.Day);
 
                     return true;
                 }
@@ -53,20 +52,10 @@ namespace BLL.DataFunctionalSubsystem.Class
         }
 
 
-        public bool IsActivated
-        {
-            get
-            {
-                if (AmountOfInsuranceCoverage == MAX_INSURANCE_COVERAGE) { return true; }
-                return false;
-            }
-        }
-
-
         public bool IsValid()
         {
             if (OwnerCode != null && PaymentMethod != null)
-                if (HowLongValid.Year <= DateTime.Now.Year && HowLongValid.Month <= DateTime.Now.Month)
+                if (HowLongValid >= DateTime.Now)
                     return true;
 
             return false;

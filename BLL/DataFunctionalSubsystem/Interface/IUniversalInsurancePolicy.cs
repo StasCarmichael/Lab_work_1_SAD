@@ -8,8 +8,7 @@ namespace BLL.DataFunctionalSubsystem.Interface
         decimal InsuranceCost { get; }
         DateTime HowLongValid { get; }
 
-        decimal AmountOfInsuranceCoverage { get; }
         bool Activate();
-        bool IsActivated { get; }
+        decimal AmountOfInsuranceCoverage { get; }
     }
 }

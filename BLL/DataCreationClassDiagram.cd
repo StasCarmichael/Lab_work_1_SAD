@@ -7,9 +7,9 @@
       <FileName>DataPackingSubsystem\Class\AdministrativeServiceCenter.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="UniversalElectronicCard" />
       <Field Name="CodeBuilder" />
       <Field Name="PassportService" />
-      <Field Name="UniversalElectronicCard" />
       <Property Name="Bank" />
       <Property Name="InsuranceAgency" />
     </ShowAsAssociation>
@@ -61,10 +61,10 @@
       <FileName>DataElectronicCardSubsystem\Class\UniversalElectronicCard.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="BankCard" />
       <Property Name="IDCode" />
-      <Property Name="InsurancePolicy" />
       <Property Name="Passport" />
+      <Property Name="BankCard" />
+      <Property Name="InsurancePolicy" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
